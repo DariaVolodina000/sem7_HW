@@ -29,6 +29,15 @@ int[,] FillArray(int[,] arr)
     return arr;
 }
 
-int[,] line = new int[5, 5];
+int IntPutInt(string message)
+{
+    Console.WriteLine(message);
+    int num = Convert.ToInt32(Console.ReadLine());
+    return num;
+}
+
+int x = IntPutInt("Введите количество строк: ");
+int y = IntPutInt("Введите количество столбцов: ");
+int[,] line = new int[x, y];
 line = FillArray(line);
 PrintArray(line);
